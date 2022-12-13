@@ -8,17 +8,16 @@ import {
 } from "./framework.js";
 
 // Verbindung zum Chat Server herstellen.
-const socket = io(
-  "http://hslu-schnuppertage-chat-socket-l8dci.ondigitalocean.app:443"
-);
+/**  
+  Aufgabe 2.3: Schreibe hier deinen Code hin!
+*/
 
 // -- Nachricht empfangen
 // Auf eine neue Nachricht vom Server warten. Bei einer neuen Nachricht den inneren Teil
 // dieses Abschnitts ausführen.
-socket.on("message", (msg) => {
-  // Nachricht im Chat anzeigen
-  receiveMessage(msg);
-});
+/**  
+  Aufgabe 2.4: Schreibe hier deinen Code hin!
+*/
 
 // -- Nachricht senden
 // Auf Absenden des Formulars zum Senden einer Nachricht warten. Beim Absenden den inneren Teil
@@ -26,21 +25,7 @@ socket.on("message", (msg) => {
 messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Nachricht aus dem Eingabefeld auslesen
-  const message = messageInput.value;
-
-  // Prüfen, ob die Eingabe gültig ist
-  if (message.trim().length === 0) return;
-
-  // Nachricht an den Server senden
-  socket.emit("message", message);
-
-  // Nachricht im Chat anzeigen
-  sendMessage(message);
-
-  // Den Chat automatisch zur neusten Nachricht herunterscrollen
-  scrollToBottom();
-
-  // Das Eingabefeld der Nachricht leeren
-  messageInput.value = "";
+  /**  
+    Aufgabe 2.5: Schreibe hier deinen Code hin!
+  */
 });
